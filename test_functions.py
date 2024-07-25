@@ -8,7 +8,7 @@ Created on Wed Jul 17 12:15:29 2024
 
 import unittest
 
-class TestFunctions(unittest.TestCase):
+class test_functions(unittest.TestCase):
     
     def setUp(self):
         self.InputData()
