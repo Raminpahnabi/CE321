@@ -8,7 +8,7 @@ Created on Wed Jul 17 12:15:29 2024
 
 import unittest
 
-class test_functions(unittest.TestCase):
+class TestFunctions(unittest.TestCase):
     
     def setUp(self):
         self.InputData()
@@ -18,10 +18,10 @@ class test_functions(unittest.TestCase):
         # self.results_b = 10
         # self.expected_results_c = 15
         with open('data.txt', 'r') as file:
-                data = file.readlines()
-                self.results_a = int(data[0].strip())
-                self.results_b = int(data[1].strip())
-                self.expected_results_c = int(data[2].strip())
+            data = file.readlines()
+            self.results_a = int(data[0].strip())
+            self.results_b = int(data[1].strip())
+            self.expected_results_c = int(data[2].strip())
                 
     def Function_a(self):
         return self.results_a
