@@ -41,7 +41,9 @@ class TestFunctions(unittest.TestCase):
     def test_Function_c(self):
         a = self.Function_a()
         b = self.Function_b()
-        self.assertEqual(self.Function_c(a, b), self.expected_results_c, f"Function_c failed for this student")
+        val = self.Function_c(a, b) == self.expected_results_c
+        self.assertTrue(val,f"Function_c failed for this student")
+        # self.assertEqual(self.Function_c(a, b), self.expected_results_c, f"Function_c failed for this student")
 
 if __name__ == '__main__':
     unittest.main()
