@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         submodules: recursive
-        token: ${{ secrets.ACCESS_TOKEN }}  # Use your PAT secret here
+        token: ${{ secrets.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 }}  # Use your PAT secret here
         repository: Raminpahnabi/CE321
         ssh-strict: true
         persist-credentials: true
