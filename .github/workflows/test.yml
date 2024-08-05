@@ -16,13 +16,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        submodules: recursive
-        token: ${{ secrets.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 }}  # Use the token if you need additional permissions
-
+          token: ${{ secrets.PAT_TOKEN }}
+          submodules: recursive
+          ssh-strict: true
+          persist-credentials: true
+          clean: true
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
+          fetch-tags: false
+          lfs: false
+          set-safe-directory: true
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'  # Change this to your required Python version
+        python-version: '3.x'  # Change this to your required Python version
 
     - name: Install dependencies
       run: |
