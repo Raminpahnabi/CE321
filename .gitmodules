@@ -1,6 +1,3 @@
-#[submodule "private-repo"]
-#	path = private-repo
-#	url = https://github.com/Raminpahnabi/CE321_private.git
-[submodule "CE321"]
-	 path = CE321
-         url = https://github.com/username/CE321.git
+[submodule "private-repo"]
+	path = private-repo
+	url = https://github.com/Raminpahnabi/CE321_private.git
