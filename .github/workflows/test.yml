@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         submodules: recursive
-        token: ${{ secrets.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 }}  # Use the token if you need additional permissions
+        token: ${{ secrets.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 }}  # Use the token if you need additional permissions
 
     - name: Set up Python
       uses: actions/setup-python@v4
