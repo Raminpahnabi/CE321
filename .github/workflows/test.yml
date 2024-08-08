@@ -23,6 +23,12 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    
+    - name: Build executable
+      run: |
+        pyinstaller --onefile test_functions.py
+        chmod +x dist/test_functions
+
     - name: Run executable
       run: |
         ./dist/test_functions
