@@ -27,7 +27,9 @@ jobs:
 
     - name: Run tests
       run: |
-        python3 -m unittest discover -s . -p 'test_*.py'
+       # python3 -m unittest discover -s . -p 'test_*.py'
+         chmod +x dist/test_functions  # Ensure the binary is executable
+        ./dist/test_functions  # Run the executable file
 
        
 
