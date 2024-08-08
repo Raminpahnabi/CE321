@@ -10,26 +10,28 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.PAT_TOKEN }}  # Ensure the token is set as a GitHub Secret
-        submodules: recursive  # Checkout submodules as well
-        ssh-strict: true
-        persist-credentials: true
+        submodules: recursive
+        token: ${{ secrets.PAT_TOKEN }} # Ensure the token is set as a GitHub Secret
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+      # Note: This step might be redundant if you're not using Python scripts.
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      # Note: This step might be redundant if your executable doesn't require additional dependencies.
+
+    - name: Build executable
+      run: |
+        # This step can be omitted if you are directly using pre-built executables.
+        echo "Skipping build since executable is already available in dist/"
 
     - name: Run tests
       run: |
-       # python3 -m unittest discover -s . -p 'test_*.py'
-         chmod +x dist/test_functions  # Ensure the binary is executable
-        ./dist/test_functions  # Run the executable file
-
+        ./dist/test_functions
        
 
