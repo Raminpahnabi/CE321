@@ -30,7 +30,7 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller --onefile Documents/byu/Unit_Test_CE321/test_functions.py
+        pyinstaller --onefile Documents/BYU/Unit_Test_CE321/test_functions.py
 
     - name: Run executable
       run: |
