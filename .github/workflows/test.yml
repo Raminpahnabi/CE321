@@ -25,13 +25,14 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       # Note: This step might be redundant if your executable doesn't require additional dependencies.
 
+    
     - name: Build executable
       run: |
-        # This step can be omitted if you are directly using pre-built executables.
-        echo "Skipping build since executable is already available in dist/"
+        # Add commands to build your executable here
+        # Example for a C++ project:
+        make
 
     - name: Run tests
       run: |
-        ./dist/test_functions
-       
+        ./dist/test_functions       
 
