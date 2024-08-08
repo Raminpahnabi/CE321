@@ -11,28 +11,27 @@ jobs:
       uses: actions/checkout@v3
       with:
         submodules: recursive
-        token: ${{ secrets.PAT_TOKEN }} # Ensure the token is set as a GitHub Secret
+        token: ${{ secrets.PAT_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-      # Note: This step might be redundant if you're not using Python scripts.
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      # Note: This step might be redundant if your executable doesn't require additional dependencies.
 
-    
+    - name: Install PyInstaller
+      run: |
+        pip install pyinstaller
+
     - name: Build executable
       run: |
-        # Add commands to build your executable here
-        # Example for a C++ project:
-        make
+        pyinstaller --onefile test_functions.py
 
     - name: Run tests
       run: |
-        ./dist/test_functions       
+        ./dist/test_functions
 
