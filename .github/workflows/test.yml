@@ -29,6 +29,11 @@ jobs:
       run: |
         pip install pyinstaller
 
+    
+    - name: Build executable
+      run: |
+        pyinstaller --onefile test_functions.py
+        chmod +x dist/test_functions
   
     - name: Run tests
       run: |
