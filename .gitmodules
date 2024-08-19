@@ -4,3 +4,6 @@
 [submodule "private-repo-py"]
 	path = private-repo-py
 	url = https://github.com/Raminpahnabi/CE321_.py.git
+[submodule "private-repo"]
+        path = private-repo-km
+        url = https://github.com/kendrickshepherd/CE321_with_Ramin.git
