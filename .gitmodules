@@ -8,5 +8,5 @@
         path = private-repo-km
         url = https://github.com/kendrickshepherd/CE321_with_Ramin.git
 [submodule "private-repo.km"]
-	path = private-repo.km
+	path = private-repo-km
 	url = https://github.com/kendrickshepherd/CE321_with_Ramin.git
